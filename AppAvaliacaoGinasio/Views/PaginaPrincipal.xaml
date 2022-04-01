@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppAvaliacaoGinasio.Views.PaginaPrincipal">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu">
+            <StackLayout>
+                <Image Source="GymLogo" HorizontalOptions="Center"/>
+                <Label Text="Ginásio" FontSize="Large" TextColor="Black"
+                       Margin="0,0,0,50" HorizontalOptions="Center"/>
+                <Button x:Name="btnHome" Text="Home" 
+                    HorizontalOptions="FillAndExpand" Clicked="btnHome_Clicked" Margin="0,0,0,40"/>
+                
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="plus.png"  WidthRequest="50"/>
+                    <Button x:Name="btnRegistar" Text="Registar" 
+                            HorizontalOptions="FillAndExpand"  Clicked="btnRegistar_Clicked"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="magnifyingGlass.png" WidthRequest="50"/>
+                    <Button x:Name="btnListar" Text="Localizar" 
+                        HorizontalOptions="FillAndExpand" Clicked="btnListar_Clicked"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="questionMark"  WidthRequest="50"/>
+                    <Button x:Name="btnSobre" Text="Sobre" 
+                        HorizontalOptions="FillAndExpand" Clicked="btnSobre_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <ContentPage Title="Bloco de Notas">
+            <Label Text="Bem-vindo!"/>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

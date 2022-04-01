@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppAvaliacaoGinasio.Views.PageImc"
+             Title="Cálculo do Imc">
+    <ContentPage.Content>
+        <StackLayout Spacing="20">
+            <Label Margin="20,0,20,0" HorizontalTextAlignment="Center" 
+                   Text="Para o calculo do IMC, precisamos do seu peso e altura atual"
+                   TextColor="Black" FontSize="Medium"/>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Label Text="Peso"/>
+                <Grid ColumnDefinitions="*,Auto">
+                    <Entry x:Name="entPeso"/>
+                    <Label Text="kg" Grid.Column="1"/>
+                </Grid>
+            </StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Label Text="Altura"/>
+                <Grid ColumnDefinitions="*,Auto">
+                    <Entry x:Name="entAltura"/>
+                    <Label Text="m" Grid.Column="1"/>
+                </Grid>
+            </StackLayout>
+            <Grid ColumnDefinitions="*,*" VerticalOptions="EndAndExpand">
+                <Button x:Name="btnCalcular" 
+                    Text="Calcular" Clicked="btnCalcular_Clicked"/>
+                <Button x:Name="btnCancelar"  Grid.Column="1"
+                    Text="Cancelar" Clicked="btnCancelar_Clicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

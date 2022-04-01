@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Registo"
+             x:Class="AppAvaliacaoGinasio.Views.PageRegistar">
+    <ContentPage.Content>
+        <Grid RowDefinitions="Auto,*,*, Auto">
+            <StackLayout Padding="10">
+                <Grid ColumnDefinitions="Auto,*">
+                    <Label Text="Data:" TextColor="Black"
+                       FontSize="15"
+                       Margin="4,10,0,0"/>
+                    <DatePicker Grid.Column="1" x:Name="datePicker"/>
+                </Grid>
+                <Grid RowDefinitions="Auto,*" ColumnDefinitions="*,*" >
+                    <Label Text="Entrada:" />
+                    <TimePicker Grid.Row="1" x:Name="timePickerEntrada"/>
+                    <Label Text="Saída:" Grid.Column="1"/>
+                    <TimePicker Grid.Row="1" Grid.Column="1" x:Name="timePickerSaida"/>
+                </Grid>
+                <Grid ColumnDefinitions="Auto,*">
+                    <Label Text="Intensidade"/>
+                    <Picker Grid.Column="1" x:Name="pickerIntensidade"/>
+                </Grid>
+                <Grid ColumnDefinitions="Auto,*">
+                    <Label Text="Tipo de treino"/>
+                    <Entry Grid.Column="1" x:Name="entTipo"/>
+                </Grid>
+                <Grid ColumnDefinitions="Auto,*">
+                    <Label Text="Calorias Perdidas"/>
+                    <Entry Grid.Column="1" x:Name="entCalorias"/>
+                </Grid>
+                <Grid ColumnDefinitions="Auto,*,30">
+                    <Label Text="IMC"/>
+                    <Entry Grid.Column="1" x:Name="entImc"/>
+                    <Button Text="?" Grid.Column="2"
+                            x:Name="btnIMC" Clicked="btnIMC_Clicked"/>
+                </Grid>
+            </StackLayout>
+            <Grid Grid.Row="1" RowDefinitions="Auto,*">
+                <Label Text="Equipamentos Usados"/>
+                <Editor Grid.Row="1"
+                        x:Name="edtEquipamentosUsados"/>
+            </Grid>
+            <Grid Grid.Row="2" RowDefinitions="Auto,*">
+                <Label Text="Partes do corpo trabalhadas"/>
+                <Editor Grid.Row="1"
+                        x:Name="edtPartesCorpo"/>
+            </Grid>
+
+            
+            <StackLayout Orientation="Horizontal" Margin="20,0,20,0" Grid.Row="3">
+                <Button x:Name="btnGuardar" Text="Inserir" Clicked="btnGuardar_Clicked"
+                        HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="btnEliminar" Text="Eliminar" Clicked="btnEliminar_Clicked"
+                        HorizontalOptions="FillAndExpand" IsVisible="False"/>
+                <Button x:Name="btnCancelar" Text="Cancelar" Clicked="btnCancelar_Clicked"
+                        HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

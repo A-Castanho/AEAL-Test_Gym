@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppAvaliacaoGinasio.Views.PageHome">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="ImageButton">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="Padding" Value="10"/>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid Margin="20" ColumnDefinitions="*,*" RowDefinitions="*,100,Auto">
+            <Frame BorderColor="Black" Grid.ColumnSpan="2" CornerRadius="1000"
+                   Margin="30" Padding="0">
+                <Image Source="GymLogo" Margin="0"
+                       HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            </Frame>
+            <Label Text="Registar" Grid.Row="2" Grid.Column="0" 
+                   FontSize="Large" HorizontalOptions="CenterAndExpand" VerticalOptions="End"/>
+            <ImageButton x:Name="imgListar" Source="magnifyingGlass"
+                         Grid.Row="1" Clicked="imgListar_Clicked">
+            </ImageButton>
+            <Label Text="Registar" Grid.Row="2" Grid.Column="1"
+                   FontSize="Large" HorizontalOptions="CenterAndExpand" VerticalOptions="End"/>
+            <ImageButton x:Name="imgRegistar" Source="plus"
+                    Grid.Row="1" Grid.Column="1" Clicked="imgRegistar_Clicked">
+            </ImageButton>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

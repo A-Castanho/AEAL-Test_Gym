@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Treinos"
+             x:Class="AppAvaliacaoGinasio.Views.PageListar">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="0,15,0,0">
+                <Switch x:Name="switchFiltro" Toggled="switchFiltro_Toggled"/>
+                <Label Text="Pesquisar por filtro"/>
+            </StackLayout>
+            <DatePicker x:Name="datePicker" DateSelected="datePicker_DateSelected"/>
+            <BoxView BackgroundColor="Black" HeightRequest="1"/>
+            <ListView x:Name="ListaTreinos" HasUnevenRows="True" SeparatorColor="Black" Margin="15"
+                    ItemSelected="ListaTreinos_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding DateTimeEntrada, StringFormat='{0}'}"/>
+                                <Label Text="{Binding Intensidade, StringFormat='Intensidade: {0}'}"
+                                    HorizontalOptions="EndAndExpand"/>
+                                <Label Text="{Binding TipoTreino, StringFormat='Treino: {0}'}"
+                                    HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
